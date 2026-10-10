@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Heart assessment</title><link rel="stylesheet" href="../css/style.css"></head>
+<body><main class="card wide"><nav><strong>HeartSafe</strong><a href="dashboard.html">Dashboard</a></nav><h1>Heart risk assessment</h1><p>Enter the clinical parameters used by the model.</p><form id="prediction-form"><div class="grid">
+<label>Age<input name="age" type="number" min="18" max="120" required></label>
+<label>Sex<select name="sex"><option value="1">Male</option><option value="0">Female</option></select></label>
+<label>Chest pain<select name="cp"><option value="0">Typical angina</option><option value="1">Atypical angina</option><option value="2">Non-anginal pain</option><option value="3">Asymptomatic</option></select></label>
+<label>Resting BP (mmHg)<input name="trestbps" type="number" min="70" max="250" required></label>
+<label>Cholesterol (mg/dL)<input name="chol" type="number" min="50" max="700" required></label>
+<label>Fasting blood sugar<select name="fbs"><option value="0">No</option><option value="1">Yes</option></select></label>
+<label>Resting ECG<select name="restecg"><option value="0">Normal</option><option value="1">ST-T abnormality</option><option value="2">LV hypertrophy</option></select></label>
+<label>Maximum heart rate<input name="thalach" type="number" min="40" max="250" required></label>
+<label>Exercise angina<select name="exang"><option value="0">No</option><option value="1">Yes</option></select></label>
+<label>ST depression<input name="oldpeak" type="number" min="0" max="10" step="0.1" required></label>
+<label>Slope<select name="slope"><option value="0">Upsloping</option><option value="1">Flat</option><option value="2">Downsloping</option></select></label>
+<label>Major vessels (0–3)<input name="ca" type="number" min="0" max="3" required></label>
+<label>Thalassemia<select name="thal"><option value="0">Normal</option><option value="1">Fixed defect</option><option value="2">Reversible defect</option><option value="3">Unknown</option></select></label>
+</div><button class="button">Estimate risk</button><p id="message"></p></form></main><script src="../js/api.js"></script><script src="../js/form.js"></script></body></html>

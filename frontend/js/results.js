@@ -1,0 +1,2 @@
+const result = JSON.parse(localStorage.getItem("last_result") || "{}");
+document.querySelector("#result").innerHTML = `<p class="probability">${Math.round((result.probability || 0) * 100)}%</p><h2>${result.risk_level || "Unavailable"} risk</h2><p>${result.message || "No result available."}</p><h3>Important factors</h3><p>${(result.important_factors || []).join(", ") || "Model does not expose feature importance."}</p>`;

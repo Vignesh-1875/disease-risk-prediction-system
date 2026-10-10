@@ -1,0 +1,3 @@
+apiRequest("/prediction/history").then(({predictions}) => {
+  document.querySelector("#history").innerHTML = predictions.map(item => `<article><strong>${item.risk_level} risk</strong> — ${Math.round(item.probability * 100)}%<small>${new Date(item.created_at).toLocaleString()}</small></article>`).join("") || "<p>No assessments yet.</p>";
+}).catch(error => { document.querySelector("#history").textContent = error.message; });

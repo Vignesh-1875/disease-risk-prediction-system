@@ -1,0 +1,9 @@
+Flask==3.0.3
+Flask-Cors==4.0.1
+PyJWT==2.9.0
+python-dotenv==1.0.1
+pymongo==4.8.0
+Werkzeug==3.0.4
+numpy==2.1.1
+scikit-learn==1.6.1
+joblib==1.4.2
